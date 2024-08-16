@@ -1,0 +1,115 @@
+/* product.css */
+
+.product-container {
+  padding: 30px;
+  background-color: #f8f8f8;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 5 columns per row */
+  gap: 20px; /* Add space between items */
+  justify-content: center; /* Center items */
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure rounded corners are visible */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 500px; /* Fixed height for images */
+  object-fit: cover; /* Crop images to fit */
+  border-radius: 9px; /* Match border radius of item */
+}
+
+.product-name {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.1em;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+.action-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.quantity-button:hover {
+  background-color: #d0d0d0;
+}
+
+.quantity-display {
+  font-size: 1.2em;
+  width: 40px;
+  text-align: center;
+}
+
+.add-to-cart-button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #2980b9;
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 1200px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row for smaller screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row for mobile screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row for very small screens */
+  }
+}
